@@ -6,7 +6,7 @@
 print("How's it going?")
 
 // Set your current mood as a String below
-var mood : String = ""
+var mood : String = "Good"
 
 /*:
 - experiment:
@@ -36,7 +36,10 @@ if 2 * 2 == 4 && 3 + 3 == 6 {
 Write an if statement that uses a && to compare the mood and the time. You should only reply Great! when you're in a good mood and the time is greater than 7. Imagine this is AM! It's hard to be in a "Great!" mood before 7am.
 If the time  > 7 and mood is Good then print Great!
 */
-var time : Int = 0
+var time : Int = 10
+if time > 7 && mood == "Good" {
+    print("Great!")
+}
 
 
 
@@ -58,13 +61,11 @@ if pet == "bunny" || pet == "puppy" {
 }
 ```
 */
-/*:
- - experiment:
- Your goal is to write an if statement that prints "Great!" when mood is "Good" or time >  17.
 
- Test your work by setting the values for mood and time to different values.
-*/
-
+if mood == "Good" || time > 17{
+    print("Great!")
+    
+}
 
 /*:
 ### Conditionals and Functions
@@ -77,6 +78,7 @@ if pet == "bunny" || pet == "puppy" {
  /*:
  Test your function like this:
  
+ 
  ```
  let response1 = stringToEmoji(word: "meh")
  let response2 = stringToEmoji(word: "happy")
@@ -86,7 +88,19 @@ if pet == "bunny" || pet == "puppy" {
  ```
 */
 
+func stringToEmoji(emotion : String) -> Character{
 
+    if emotion == "happy"{
+        return "😀"
+    }else if emotion == "laughing" {
+        return "😆"
+    }else if emotion == "cool"{
+        return "😎"
+    }else{
+        return "🤔"
+    }
+
+}
 
 /*:
 The emoji thing went over big with the founders. They want more! People use lots of emojis, this could be big.
@@ -102,6 +116,11 @@ otherwise -> "🤔"
 ```
 Test your work by calling the function four times with four different words and print the response. Make sure the response shows each of the four possible emojis.
 */
+
+print(stringToEmoji(emotion : "happy"))
+print(stringToEmoji(emotion : "laughing"))
+print(stringToEmoji(emotion : "cool"))
+print(stringToEmoji(emotion : "otherwise"))
 
 
 
@@ -121,9 +140,20 @@ But there are a few details that need some work. While the emojis are good, you 
 
  Test your work for all possible words.
 */
+func compare(emotion : String) -> Character{
+    if emotion == "happy" || emotion == "good" || emotion == "okay" || emotion == "awesome" || emotion == "lit" || emotion == "fun"{
+        return "😀"
+    }else if emotion == "laughing"{
+        return "😆"
+    }else{
+        return "🤔"
+    }
+  
+}
 
-
-
+print(compare(emotion : "happy"))
+print(compare(emotion : "laughing"))
+print(compare(emotion : "woo!"))
 
  
 //: [Next](@next)

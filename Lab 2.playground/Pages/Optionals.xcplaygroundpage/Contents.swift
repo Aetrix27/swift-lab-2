@@ -128,8 +128,27 @@ In this Playground we have looked at some of the capabilities of optionals in Sw
  
 */
 
-
 // Write your answers here:
+
+var username : String?
+print(username)
+username = "David"
+print(username)
+print(username!)
+username = nil
+
+if let username = username{
+    print("The name is \(username)")
+}else if username == nil{
+    username = "Anonymous"
+    print(username!)
+    
+}else{
+    print("There is no username right now")
+        
+}
+
+
 
 
 
