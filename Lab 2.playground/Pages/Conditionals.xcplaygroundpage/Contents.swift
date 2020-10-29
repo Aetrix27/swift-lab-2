@@ -15,7 +15,11 @@ If the reply is "Good" print Great!
 Otherwise, if you said "Bad", print Oh no!
 In all other cases, I reply "I see..."
 */
-
+if(mood == "Good"){
+    print("Great")
+}else if (mood == "Bad"){
+    print("Oh no!")
+}
 
 /*:
 ### Combining Conditionals
@@ -121,10 +125,6 @@ print(stringToEmoji(emotion : "happy"))
 print(stringToEmoji(emotion : "laughing"))
 print(stringToEmoji(emotion : "cool"))
 print(stringToEmoji(emotion : "otherwise"))
-
-
-
-
 
 /*:
 That emoji function was really good. Everyone is thinks this app will be huge!

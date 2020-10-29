@@ -33,6 +33,8 @@ if maybeAnInt != nil {
 
 A more compact way of testing and acting on an optional value is **optional binding**, where we test for the presence of an object and, if it exists, we create a new variable for this object in a narrower scope. Here, we "bind" the value of `maybeAnInt` (if present) to a new constant named `definitelyAnInt`, which only exists inside the `if/else` block, and print it:
 */
+maybeAnInt = 5
+
 if let definitelyAnInt = maybeAnInt {
     print("maybeAnInt contains a value, and it is \(definitelyAnInt)")
 } else {
@@ -140,7 +142,7 @@ username = nil
 if let username = username{
     print("The name is \(username)")
 }else if username == nil{
-    username = "Anonymous"
+    username = optionalString ?? "Anonymous"
     print(username!)
     
 }else{
